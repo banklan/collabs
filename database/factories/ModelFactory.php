@@ -15,10 +15,24 @@
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
+    $gender = $faker->randomElement(['male', 'female']);
+
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'f_name' => $faker->firstName,
+        'l_name' => $faker->lastName,
+        'gender' => $gender,
+        'city' => $faker->city,
+        'email' => $faker->freeEmail,
+        'password' =>$password ?: $password = bcrypt('password'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Project::class, function (Faker\Generator $faker) {
+
+    return [
+        'title' => $faker->realText($maxNbChars = 80),
+        'body' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
+        'user_id' => rand(1, 14),
     ];
 });

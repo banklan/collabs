@@ -13,12 +13,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Open+Sans:400,600|Raleway:300,400|Work+Sans:200" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        @include('layouts.navbar')
-
         @yield('content')
     </div>
 

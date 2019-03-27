@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top" id="{{ Request::is('/') ? 'home_nav' : 'gen_nav'}}">
     <div class="container">
         <div class="navbar-header">
 
@@ -24,6 +24,9 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="">How it works</a></li>    
+               
+                <li class="dropdown"><a href="">Support a cause</a></li>
                 <!-- Authentication Links -->
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>

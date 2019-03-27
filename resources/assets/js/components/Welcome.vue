@@ -1,14 +1,25 @@
 <template>
     <div class="welcome">
-        <div class="welcome_banner">
-            <a class="create_cta" href="#">Create A project</a>
-            <div class="banner_txt">
-                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit necessitatibus!</h1>
-                <a href="#" class="welcome_cta">Join us</a>
-            </div>
-            <latest-projects></latest-projects>
-            <!-- <popular-projects></popular-projects> -->
-            <!-- <happy-endings></happy-endings> -->
-        </div>
+        <welcome-banner></welcome-banner>
+        <!-- <test></test> -->
+        <services-cards></services-cards>
+        <latest-projects></latest-projects>
+        <popular-projects></popular-projects>
+        <happy-endings></happy-endings>
+        <our-guarantees></our-guarantees>
+        <page-footer></page-footer>
     </div>
 </template>
+
+<script>
+export default {
+    // beforeRouteEnter (to, from, next) {
+    //     if(to == '/')
+    // }
+}
+</script>
+
+<style scoped>
+    
+</style>
+
